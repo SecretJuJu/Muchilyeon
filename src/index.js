@@ -1,10 +1,5 @@
-/**
- * In this project, muyaho means anything.
- * For example, "muyaho~" means "Hello world" or "Good morning" or whatever.
- */
-
-import muyahoImage from './muyaho.png'
-import muyahoAudio from './muyaho.mp3'
+import muchilyeonImage from './segu-punch.gif'
+import muchilyeonAudio from './muchilyeon.mp3'
 
 const AudioContext = window.AudioContext || window.webkitAudioContext
 const audioCtx = new AudioContext()
@@ -13,7 +8,7 @@ const audios = []
 const audiosCount = 10
 
 for (let i = 0; i < audiosCount; i += 1) {
-  const audio = new Audio(muyahoAudio)
+  const audio = new Audio(muchilyeonAudio)
   audios.push(audio)
 }
 
@@ -23,9 +18,9 @@ const imageHeight = 222
 const halfOfImageWidth = imageWidth / 2
 const halfOfImageHeight = imageHeight / 2
 
-const muyahoStyle = document.createElement('style')
-muyahoStyle.innerHTML = /* css */ `
-    .muyaho-img {
+const muchilyeonStyle = document.createElement('style')
+muchilyeonStyle.innerHTML = /* css */ `
+    .muchilyeon-img {
       width: ${imageWidth}px;
       height: auto;
       transition: transform 1.5s ease-out, opacity 300ms ease;
@@ -39,12 +34,12 @@ muyahoStyle.innerHTML = /* css */ `
     }
   `
 
-document.head.appendChild(muyahoStyle)
+document.head.appendChild(muchilyeonStyle)
 
 window.addEventListener('pointerdown', (e) => {
   const img = document.createElement('img')
-  img.classList.add('muyaho-img')
-  img.src = muyahoImage
+  img.classList.add('muchilyeon-img')
+  img.src = muchilyeonImage
   img.style.left = e.pageX - halfOfImageWidth + 'px'
   img.style.top = e.pageY - halfOfImageHeight + 'px'
 
@@ -65,5 +60,6 @@ window.addEventListener('pointerdown', (e) => {
     setTimeout(() => {
       img.remove()
     }, 300)
-  }, 700)
+  }, 400)
 })
+

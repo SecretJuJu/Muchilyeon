@@ -1,14 +1,14 @@
 {
-  "name": "muyaho",
+  "name": "muchilyeon",
   "version": "1.0.2",
-  "description": "muyaho on every click",
+  "description": "muchilyeon on every click",
   "main": "build/index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "webpack"
   },
   "keywords": [
-    "muyaho"
+    "muchilyeon"
   ],
   "author": "jhaemin",
   "license": "MIT",
@@ -19,6 +19,6 @@
     "file-loader": "^6.2.0",
     "parcel-bundler": "^1.12.5",
     "webpack": "^5.28.0",
-    "webpack-cli": "^4.6.0"
+    "webpack-cli": "^4.9.2"
   }
 }
